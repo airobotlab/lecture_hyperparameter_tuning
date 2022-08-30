@@ -1,0 +1,191 @@
+<div class="main-box clear">
+<h1 class="story-title"><a href="https://thehackernews.com/2018/04/oracle-weblogic-rce-exploit.html">Faulty Patch for Oracle WebLogic Flaw Opens Updated Servers to Hackers Again</a></h1>
+<div class="main-left-right clear">
+<div class="left-box">
+<div class="content section" id="content"><div class="widget Blog" data-version="1" id="Blog1">
+<div class="blog-posts clear">
+<div class="post">
+<div class="post-body" itemscope="" itemtype="https://schema.org/NewsArticle">
+<link href="https://thehackernews.com/2018/04/oracle-weblogic-rce-exploit.html" itemprop="mainEntityOfPage url">
+<meta content="Faulty Patch for Oracle WebLogic Flaw Opens Updated Servers to Hackers Again" itemprop="headline">
+<meta content="en-US" itemprop="inLanguage">
+<meta content="2018-04-30T06:36:00-07:00" itemprop="datePublished">
+<meta content="2018-04-30T13:39:31Z" itemprop="dateModified">
+<div itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject"><meta content="https://thehackernews.com/images/-9J8Q80vtoRQ/WucbFOd4joI/AAAAAAAAweI/PzSpfD_3wXQWLKjTW_qEpQzFlHTrd9QigCLcBGAs/s728-e100/oracle-weblogic-server-deserialization-remote-command-execution.png" itemprop="url"><meta content="728" itemprop="width"><meta content="380" itemprop="height"></div>
+<div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization"><meta content="The Hacker News" itemprop="name"><meta content="https://thehackernews.com/" itemprop="url"><div content="https://thehackernews.com/images/-lr1jzOJlY3g/Wzjug8yO0UI/AAAAAAAAxSk/pVpxFhgIHRcIbASdYo3YSDZLB8p3ytjqACLcBGAs/s460/the-hacker-news.jpg" itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject"><meta content="https://thehackernews.com/images/-lr1jzOJlY3g/Wzjug8yO0UI/AAAAAAAAxSk/pVpxFhgIHRcIbASdYo3YSDZLB8p3ytjqACLcBGAs/s460-e100/the-hacker-news.jpg" itemprop="url"><meta content="460" itemprop="width"><meta content="60" itemprop="height"></div></div>
+<div itemprop="author" itemscope="" itemtype="https://schema.org/Person"><meta content="Swati Khandelwal" itemprop="name"></div>
+<div class="clear post-head">
+<div class="postmeta"><i class="icon-font icon-calendar"></i><span class="author">April 30, 2018</span><i class="icon-font icon-user"></i><span class="author"><a href="/p/authors.html" rel="author">Swati Khandelwal</a></span></div></div>
+<div class="articlebody clear cf" id="articlebody"><div dir="ltr" style="text-align: left;" trbidi="on">
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://thehackernews.com/images/-9J8Q80vtoRQ/WucbFOd4joI/AAAAAAAAweI/PzSpfD_3wXQWLKjTW_qEpQzFlHTrd9QigCLcBGAs/s728-e100/oracle-weblogic-server-deserialization-remote-command-execution.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img alt="oracle-weblogic-server-deserialization-remote-command-execution" border="0" data-original-height="380" data-original-width="728" src="https://thehackernews.com/images/-9J8Q80vtoRQ/WucbFOd4joI/AAAAAAAAweI/PzSpfD_3wXQWLKjTW_qEpQzFlHTrd9QigCLcBGAs/s728-e100/oracle-weblogic-server-deserialization-remote-command-execution.png" title="oracle-weblogic-server-deserialization-remote-command-execution"></a></div>
+Earlier this month, Oracle <a href="https://www.oracle.com/technetwork/security-advisory/cpuapr2018-3678067.html" rel="noopener" target="_blank">patched</a> a highly critical Java deserialization remote code execution vulnerability in its WebLogic Server component of Fusion Middleware that could allow attackers to easily gain complete control of a vulnerable server.<br>
+<br>
+However, a security researcher, who operates through the Twitter handle @pyn3rd and claims to be part of the Alibaba security team, has now <a href="https://twitter.com/pyn3rd/status/990114565219344384" rel="noopener" target="_blank">found</a> a way using which attackers can bypass the security patch and exploit the WebLogic vulnerability once again.<br>
+<div class="ad_two clear"><center class="cf"><div id="967ecfad-bf6b-429e-9a39-9770c8b7d188" class="_ap_apex_ad" max-height="290"> <script> var adpushup = adpushup || {}; adpushup.que = adpushup.que || []; adpushup.que.push(function() { adpushup.triggerAd("967ecfad-bf6b-429e-9a39-9770c8b7d188"); });</script></div></center></div><br>
+WebLogic Server acts as a middle layer between the front end user interface and the backend database of a multi-tier enterprise application. It provides a complete set of services for all components and handles details of the application behavior automatically.<br>
+<br>
+Initially discovered in November last year by <a href="https://mp.weixin.qq.com/s/nYY4zg2m2xsqT0GXa9pMGA" rel="noopener" target="_blank">Liao Xinxi</a> of NSFOCUS security team, the Oracle WebLogic Server flaw (CVE-2018-2628) can be exploited with network access over TCP port 7001.<br>
+<div class="video-container">
+<iframe loading="lazy" allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/ys9B1CWf8GI?rel=0&amp;showinfo=0" width="560"></iframe></div>
+If exploited successfully, the flaw could allow a remote attacker to completely take over a vulnerable Oracle WebLogic Server. The vulnerability affects versions 10.3.6.0, 12.1.3.0, 12.2.1.2 and 12.2.1.3.<br>
+<br>
+Since a proof-of-concept (<a href="https://github.com/brianwrf/CVE-2018-2628" rel="noopener" target="_blank">PoC</a>) exploit for the original Oracle WebLogic Server vulnerability has already been made public on Github and someone has just bypassed the patch as well, your up-to-date services are again at risk of being hacked.<br>
+<div class="ad_two clear"><center class="cf"><div id="8c2d7f94-a9c5-43b2-83a4-cdcf711ae05e" class="_ap_apex_ad" max-height="290"> <script> var adpushup = adpushup || {}; adpushup.que = adpushup.que || []; adpushup.que.push(function() { adpushup.triggerAd("8c2d7f94-a9c5-43b2-83a4-cdcf711ae05e"); }); </script> </div></center></div><br>
+Although @pyn3rd has only released a short GIF (video) as a proof-of-concept (PoC) instead of releasing full bypass code or any technical details, it would hardly take a few hours or days for skilled hackers to figure out a way to achieve same.<br>
+<br>
+Currently, it is unclear when Oracle would release a new security update to address this issue that has re-opened CVE-2018-2628 flaw.<br>
+<br>
+In order to be at least one-step safer, it is still advisable to install April patch update released by Oracle, if you haven't yet because attackers have already <a href="https://twitter.com/GreyNoiseIO/status/988685136035307520" rel="noopener" target="_blank">started scanning</a> the Internet for vulnerable WebLogic servers.</div>
+<br>
+<div class="stophere"></div>
+<div class="sticky-stopper"></div>
+<div class="cf note-b">Found this article interesting? Follow THN on <a href="https://www.facebook.com/thehackernews" rel="noopener" target="_blank">Facebook</a>, <a href="https://twitter.com/thehackersnews" rel="noopener" target="_blank">Twitter <i class="icon-font icon-twitter"></i></a> and <a href="https://www.linkedin.com/company/thehackernews/" rel="noopener" target="_blank">LinkedIn</a> to read more exclusive content we post.</div>
+</div>
+<script data-cfasync="false">
+var share_url = encodeURIComponent('https://thehackernews.com/2018/04/oracle-weblogic-rce-exploit.html');
+var share_title = document.getElementsByTagName("title")[0].innerHTML;
+share_title = encodeURIComponent(share_title);
+</script>
+<meta content="4802841478634147276" name="blogId">
+<meta content="3646350624443809995" name="postId">
+<div class="schema_org"></div>
+<div class="float-share cf">
+<span class="fs-note">SHARE</span>
+<a class="float-share-li fs-fb" data-sm="facebook" href="#link_share" rel="nofollow noopener" target="_blank"><i class="icon-font icon-facebook"></i></a>
+<a class="float-share-li fs-tw" data-sm="twitter" href="#link_share" rel="nofollow noopener" target="_blank"><i class="icon-font icon-twitter"></i></a>
+<a class="float-share-li fs-ln" data-sm="linkedin" href="#link_share" rel="nofollow noopener" target="_blank"><i class="icon-font icon-linkedin"></i></a>
+<a class="float-share-li fs-more" href="javascript:void(0)"><i class="icon-font icon-share"></i></a>
+<a class="float-share-li fs-com show-comments" href="#comment-box"><i class="icon-font icon-comment"></i></a>
+</div>
+<div class="sharebelow clear">
+<div class="sharebelow-facebook"><a data-sm="facebook" href="#link_share" rel="nofollow noopener" target="_blank"><span><i class="icon-font icon-facebook"></i>Share</span></a></div>
+<div class="sharebelow-twitter"><a data-sm="twitter" href="#link_share" rel="nofollow noopener" target="_blank"><span><i class="icon-font icon-twitter"></i>Tweet</span></a></div>
+<div class="sharebelow-linkedin"><a data-sm="linkedin" href="#link_share" rel="nofollow noopener" target="_blank"><span><i class="icon-font icon-linkedin"></i>Share</span></a></div>
+<div class="share-show-modal share-open-modal"><span><i class="icon-font icon-share"></i>Share</span></div>
+<aside class="share-modal">
+<aside class="share-m-wrap"><a class="share-close-modal" href="javascript:void(0)"><i class="icon-font icon-cancel"></i></a>
+<a class="more-share m-fb" data-sm="facebook" href="#link_share" rel="nofollow noopener" target="_blank"><i class="icon-font icon-facebook"></i>Share on Facebook</a>
+<a class="more-share m-tw" data-sm="twitter" href="#link_share" rel="nofollow noopener" target="_blank"><i class="icon-font icon-twitter"></i>Share on Twitter</a>
+<a class="more-share m-ln" data-sm="linkedin" href="#link_share" rel="nofollow noopener" target="_blank"><i class="icon-font icon-linkedin"></i>Share on Linkedin</a>
+<a class="more-share m-rd" data-sm="reddit" href="#link_share" rel="nofollow noopener" target="_blank"><i class="icon-font icon-reddit-alien"></i>Share on Reddit</a>
+<a class="more-share m-hn" data-sm="hackernews" href="#link_share" rel="nofollow noopener" target="_blank"><i class="icon-font icon-hacker-news"></i>Share on Hacker News</a>
+<a class="more-share m-em" data-sm="email" href="#link_share" rel="nofollow noopener" target="_blank"><i class="icon-font icon-mail-alt"></i>Share on Email</a>
+<a class="more-share m-wa" data-sm="whatsapp" href="#link_share" rel="nofollow noopener" target="_blank"><i class="icon-font icon-whatsapp"></i>Share on WhatsApp</a>
+<a class="more-share m-fm" data-sm="facebook-m" href="#link_share" rel="nofollow noopener" target="_blank"><img alt="Facebook Messenger" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAG9QTFRF////z+j/1+z//P7/AIT/0en/2u3/0+r/6PT/+Pz/3/D/4PD/0Oj/5PL/R6b/1Or/9/v/D4v/u97/mM7/lMz/4/L/7/f/CIj/xOP/K5n/6/X/7fb/str/h8X/8Pj/ntD/8vn/YbP/pdT/XLD/////yeSxCQAAACV0Uk5T////////////////////////////////////////////////AD/PQk8AAACwSURBVHja7NPHDoMwDAbg3xkkzEKhe9DB+z9jBWlpIzmoqtQbPuSST3FsJ+i+CMzoJxSRMRRNIooxRExhlGCMJIRWAK8+EMELYpH0Ucwh4faW9bBaQDDIZdtuVAtdHL18b5T1RleVUoW6IYD6k8SuKa9K1QihFLDNGZD3k7tdylV3gKvvWeWebYHwWxDxHc8CvfRnp0ciKTjgxYuYdTeBdJkLkU8+OnuZ/93f0UOAAQDpgJe+d1P0RQAAAABJRU5ErkJggg==">Share on Facebook Messenger</a>
+<a class="more-share m-tg" data-sm="telegram" href="#link_share" rel="nofollow noopener" target="_blank"><i class="icon-font icon-telegram"></i>Share on Telegram</a>
+</aside>
+</aside>
+<div class="sharebelow-comment"><a class="show-comments" href="#comment-box"><i class="icon-font icon-comment"></i>Comments</a></div>
+</div>
+<div class="mobile-share" id="mobile-share"><a class="float-share-li fs-more mobile-s" href="javascript:void(0)">SHARE <i class="icon-font icon-share"></i></a></div>
+<div class="tags"><span class="categ" itemprop="keywords"><a href="https://thehackernews.com/search/label/Cyber%20Attack" rel="tag"><span itemprop="articleSection">Cyber Attack</span></a>, <a href="https://thehackernews.com/search/label/hacking%20news" rel="tag"><span itemprop="articleSection">hacking news</span></a>, <a href="https://thehackernews.com/search/label/oracle" rel="tag"><span itemprop="articleSection">oracle</span></a>, <a href="https://thehackernews.com/search/label/Oracle%20WebLogic%20Server" rel="tag"><span itemprop="articleSection">Oracle WebLogic Server</span></a>, <a href="https://thehackernews.com/search/label/patch%20update" rel="tag"><span itemprop="articleSection">patch update</span></a>, <a href="https://thehackernews.com/search/label/remote%20code%20execution" rel="tag"><span itemprop="articleSection">remote code execution</span></a>, <a href="https://thehackernews.com/search/label/Vulnerability" rel="tag"><span itemprop="articleSection">Vulnerability</span></a></span></div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+<aside class="right-box">
+<div class="clear av-side-box sidefix">
+<div class="clear av-sidebar" id="av-sidebar"></div>
+</div>
+<div class="clear zoho-box">
+<ins class="adsbygoogle" data-ad-client="ca-pub-7983783048239650" data-ad-format="auto" data-ad-slot="3616315140" data-full-width-responsive="true" style="display:block"></ins><script type="b6d9e9510bbfc4206ac9b539-text/javascript"> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+</div>
+<div class="clear section" id="sidebar"><div class="widget PopularPosts" data-version="1" id="PopularPosts1">
+<div class="latest-title cf">Popular This Week</div>
+<div class="widget-content popular-posts">
+<div class="cf pop-article clear">
+<a class="pop-link cf" href="https://thehackernews.com/2020/12/us-agencies-and-fireeye-were-hacked.html">
+<div class="side-pop-image">
+<figure class="pop-image">
+<img alt="US Agencies and FireEye Were Hacked Using SolarWinds Software Backdoor" border="0" class="lazyload" data-src="https://thehackernews.com/images/-Cpd5jYOBXGk/X9b7WId_6xI/AAAAAAAABPY/RSyw2zajv6MRRJNaCspQPEerTW8vEpNpACLcBGAsYHQ/s72-c-e100/solarwinds.jpg" height="72" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" title="US Agencies and FireEye Were Hacked Using SolarWinds Software Backdoor" width="72">
+</figure>
+</div>
+<div class="pop-desc">
+<div class="pop-title">US Agencies and FireEye Were Hacked Using SolarWinds Software Backdoor</div>
+</div>
+</a>
+</div>
+<div class="cf pop-article clear">
+<a class="pop-link cf" href="https://thehackernews.com/2020/12/watch-out-adrozek-malware-hijacking.html">
+<div class="side-pop-image">
+<figure class="pop-image">
+<img alt="Watch Out! Adrozek Malware Hijacking Chrome, Firefox, Edge, Yandex Browsers" border="0" class="lazyload" data-src="https://thehackernews.com/images/-YQUc_W6-v0A/X9NbsIqoRFI/AAAAAAAABO4/d9tuOsHYwMo1Xt1C0pTpbLkTl5yTU9cQACLcBGAsYHQ/s72-c-e100/browsers.jpg" height="72" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" title="Watch Out! Adrozek Malware Hijacking Chrome, Firefox, Edge, Yandex Browsers" width="72">
+</figure>
+</div>
+<div class="pop-desc">
+<div class="pop-title">Watch Out! Adrozek Malware Hijacking Chrome, Firefox, Edge, Yandex Browsers</div>
+</div>
+</a>
+</div>
+<div class="cf pop-article clear">
+<a class="pop-link cf" href="https://thehackernews.com/2020/12/mount-locker-ransomware-offering-double.html">
+<div class="side-pop-image">
+<figure class="pop-image">
+<img alt="Mount Locker Ransomware Offering Double Extortion Scheme to Other Hackers" border="0" class="lazyload" data-src="https://thehackernews.com/images/-YcWJyUUGRew/X9OrQJA-YiI/AAAAAAAABPM/IHYiF6f3zlAhCZoLOrtinMXwix2Ci1N2QCLcBGAsYHQ/s72-c-e100/code.jpg" height="72" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" title="Mount Locker Ransomware Offering Double Extortion Scheme to Other Hackers" width="72">
+</figure>
+</div>
+<div class="pop-desc">
+<div class="pop-title">Mount Locker Ransomware Offering Double Extortion Scheme to Other Hackers</div>
+</div>
+</a>
+</div>
+<div class="cf pop-article clear">
+<a class="pop-link cf" href="https://thehackernews.com/2020/12/facebook-tracks-apt32-oceanlotus.html">
+<div class="side-pop-image">
+<figure class="pop-image">
+<img alt="Facebook Tracks APT32 OceanLotus Hackers to IT Company in Vietnam" border="0" class="lazyload" data-src="https://thehackernews.com/images/-52SYuZE1tqg/X9Mipn6UP3I/AAAAAAAABOY/MbzAT0uKWKYGek0VV3KubhrBXrrA2cuAgCLcBGAsYHQ/s72-c-e100/facebook-hackers.jpg" height="72" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" title="Facebook Tracks APT32 OceanLotus Hackers to IT Company in Vietnam" width="72">
+</figure>
+</div>
+<div class="pop-desc">
+<div class="pop-title">Facebook Tracks APT32 OceanLotus Hackers to IT Company in Vietnam</div>
+</div>
+</a>
+</div>
+<div class="cf pop-article clear">
+<a class="pop-link cf" href="https://thehackernews.com/2020/12/governance-considerations-for.html">
+<div class="side-pop-image">
+<figure class="pop-image">
+<img alt="Governance Considerations for Democratizing Your Organization's Data in 2021" border="0" class="lazyload" data-src="https://thehackernews.com/images/-TuxpfDRLu4w/X9NX_fDKSRI/AAAAAAAAAs4/W_sI9RjnAkk-q020btqkkEuDiI_jHUsiQCLcBGAsYHQ/s72-c-e100/data-security.jpg" height="72" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" title="Governance Considerations for Democratizing Your Organization's Data in 2021" width="72">
+</figure>
+</div>
+<div class="pop-desc">
+<div class="pop-title">Governance Considerations for Democratizing Your Organization's Data in 2021</div>
+</div>
+</a>
+</div>
+<div class="cf pop-article clear">
+<a class="pop-link cf" href="https://thehackernews.com/2020/12/cisco-reissues-patches-for-critical.html">
+<div class="side-pop-image">
+<figure class="pop-image">
+<img alt="Cisco Reissues Patches for Critical Bugs in Jabber Video Conferencing Software" border="0" class="lazyload" data-src="https://thehackernews.com/images/-sLRai0vUkaU/X9JAjPHg-pI/AAAAAAAABOM/Sa9nOMui9NgleBLKAEd3vq68-H2FYBYtwCLcBGAsYHQ/s72-c-e100/cisco-jabber.jpg" height="72" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" title="Cisco Reissues Patches for Critical Bugs in Jabber Video Conferencing Software" width="72">
+</figure>
+</div>
+<div class="pop-desc">
+<div class="pop-title">Cisco Reissues Patches for Critical Bugs in Jabber Video Conferencing Software</div>
+</div>
+</a>
+</div>
+</div>
+</div></div>
+<div class="clear sidebar">
+<script type="b6d9e9510bbfc4206ac9b539-text/javascript"> 
+var images = [],
+index = 0;
+  
+images[0] = `<a href='https://go.thn.li/AC' rel='nofollow noopener sponsored' target='_blank' title='cyber defense'><img alt='cyber defense' class='lazyload' data-src='https://thehackernews.com/images/-GDN37_kjmQ4/X610Oikw-qI/AAAAAAAA3aI/VCPlL5pKlKE3W404bqowgNNqp_Xi6CwkQCLcBGAsYHQ/s300-e100/banner-1.jpg' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAD6AQMAAAAho+iwAAAAA1BMVEXm5+i1+56pAAAAH0lEQVQYGe3AAQ0AAADCIPuntscHAwAAAAAAAAAAIOQmFgAB/YLDRAAAAABJRU5ErkJggg==' style='max-width:300px'/></a>`;
+
+images[1] = `<a href='https://go.thn.li/AC' rel='nofollow noopener sponsored' target='_blank' title='cyber defense'><img alt='cyber defense' class='lazyload' data-src='https://thehackernews.com/images/-GDN37_kjmQ4/X610Oikw-qI/AAAAAAAA3aI/VCPlL5pKlKE3W404bqowgNNqp_Xi6CwkQCLcBGAsYHQ/s300-e100/banner-1.jpg' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAD6AQMAAAAho+iwAAAAA1BMVEXm5+i1+56pAAAAH0lEQVQYGe3AAQ0AAADCIPuntscHAwAAAAAAAAAAIOQmFgAB/YLDRAAAAABJRU5ErkJggg==' style='max-width:300px'/></a>`;
+
+index = Math.floor(Math.random() * images.length); 
+document.write(images[index]); 
+</script>
+</div>
+</aside>
+</div>
+<div class="comments cf"><div class="comment-box cf" id="comment-box"><div class="latest-title cf">Comments</div>
+<div id="fb-root"></div>
+<div class="fb-comments" data-href="https://thehackernews.com/2018/04/oracle-weblogic-rce-exploit.html" data-numposts="10" data-width="100%"></div>
+</div></div>
+</div>
